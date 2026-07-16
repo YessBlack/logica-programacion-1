@@ -5,11 +5,72 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Orden de Numeros</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+  <header class="header">
+    <h1>Comparador de Números</h1>
+    <p>Ingresa tres números y descubre cúal es el mayor, el medio y el menor.</p>
+  </header>
 
+  <main class="main">
+    <article class="containerForm">
+      <h2>Ingresa los números</h2>
+      <div class="field">
+        <label for="numero1">Número 1</label>
+        <input type="number" id="numero1" name="numero1" required>
+      </div>
+
+      <div class="field">
+        <label for="numero2">Número 2</label>
+        <input type="number" id="numero2" name="numero2" required>
+      </div>
+
+      <div class="field">
+        <label for="numero3">Número 3</label>
+        <input type="number" id="numero3" name="numero3" required>
+      </div>
+
+      <button type="button" class="btnCalcular" id="btnCalcular">
+        <i class="fa-solid fa-calculator"></i> <span>Calcular</span>
+      </button>
+    </article>
+
+    <article class="containerResult">
+      <h2>Resultado</h2>
+      <div class="cardResult mayor">
+        <div class="cardLabel mayor">
+          <i class="fa-solid fa-arrow-trend-up"></i>
+          <p>Mayor</p>
+        </div>
+        <span class="resultNumero1" id="resultNumero1">0</span>
+      </div>
+
+      <div class="cardResult medio">
+        <div class="cardLabel medio">
+          <i class="fa-solid fa-minus"></i>
+          <p>Medio</p>
+        </div>
+        <span class="resultNumero2" id="resultNumero2">0</span>
+      </div>
+
+      <div class="cardResult menor">
+        <div class="cardLabel menor">
+          <i class="fa-solid fa-arrow-trend-down"></i>
+          <p>Menor</p>
+        </div>
+        <span class="resultNumero3" id="resultNumero3">0</span>
+      </div>
+
+    </article>
+  </main>
   <script src="./app.js"></script>
 </body>
 
