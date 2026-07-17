@@ -2,13 +2,15 @@ const isEmpty = (text) => {
   return text.trim() === ''
 }
 
+// Inputs
 const inputNumero1 = document.getElementById("numero1")
 const inputNumero2 = document.getElementById("numero2")
 const inputNumero3 = document.getElementById("numero3")
 
-const resultNumero1 = document.getElementById('resultNumero1')
-const resultNumero2 = document.getElementById('resultNumero2')
-const resultNumero3 = document.getElementById('resultNumero3')
+// Box Result
+const resultNumero1 = document.getElementById('resultMayor')
+const resultNumero2 = document.getElementById('resultMedio')
+const resultNumero3 = document.getElementById('resultMenor')
 
 const btnCalcular = document.getElementById('btnCalcular')
 
@@ -32,4 +34,17 @@ btnCalcular.addEventListener('click', () => {
   resultNumero1.textContent = numeros[0];
   resultNumero2.textContent = numeros[1];
   resultNumero3.textContent = numeros[2];
+})
+
+
+const btnReset = document.getElementById('btnReset')
+
+btnReset.addEventListener('click', () => {
+  inputNumero1.value = ''
+  inputNumero2.value = ''
+  inputNumero3.value = ''
+
+  resultNumero1.textContent = '0'
+  resultNumero2.textContent = '0'
+  resultNumero3.textContent = '0'
 })

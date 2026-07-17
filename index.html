@@ -11,10 +11,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+  <div class="circle"></div>
+
   <header class="header">
     <h1>Comparador de Números</h1>
     <p>Ingresa tres números y descubre cúal es el mayor, el medio y el menor.</p>
@@ -41,36 +42,46 @@
       <button type="button" class="btnCalcular" id="btnCalcular">
         <i class="fa-solid fa-calculator"></i> <span>Calcular</span>
       </button>
+      <button type="button" class="btnReset" id="btnReset">
+        <i class="fa-solid fa-rotate-left"></i> <span>Limpiar</span>
+      </button>
     </article>
 
     <article class="containerResult">
       <h2>Resultado</h2>
       <div class="cardResult mayor">
         <div class="cardLabel mayor">
-          <i class="fa-solid fa-arrow-trend-up"></i>
+          <i class="fa-solid fa-arrow-trend-up" aria-hidden="true"></i>
           <p>Mayor</p>
         </div>
-        <span class="resultNumero1" id="resultNumero1">0</span>
+        <span class="resultValue" id="resultMayor">0</span>
       </div>
 
       <div class="cardResult medio">
         <div class="cardLabel medio">
-          <i class="fa-solid fa-minus"></i>
+          <i class="fa-solid fa-minus" aria-hidden="true"></i>
           <p>Medio</p>
         </div>
-        <span class="resultNumero2" id="resultNumero2">0</span>
+        <span class="resultValue" id="resultMedio">0</span>
       </div>
 
       <div class="cardResult menor">
         <div class="cardLabel menor">
-          <i class="fa-solid fa-arrow-trend-down"></i>
+          <i class="fa-solid fa-arrow-trend-down" aria-hidden="true"></i>
           <p>Menor</p>
         </div>
-        <span class="resultNumero3" id="resultNumero3">0</span>
+        <span class="resultValue" id="resultMenor">0</span>
       </div>
 
     </article>
   </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 Comparador de Números · Angelic García · Generation Colombia</p>
+  </footer>
+
+  <div class="circle"></div>
+
   <script src="./app.js"></script>
 </body>
 
